@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de JavaScript</title>
+    <link rel="stylesheet"href="estilos.css">
+</head>
+
+<body>
+
+    <main class="tarjeta">
+        <h1>Mi práctica con JavaScript</h1>
+
+        <p id="mensaje">Bienvenidos</p>
+
+        <div id="imagen"> </div>
+        
+        </div>
+
+        <p class="destacado">Estoy aprendiendo JavaScript</p>
+
+        <div class="botones">
+            <button onclick="cambiarTexto()">Cambiar texto</button><br>
+            <button onclick="agregarImagen()">Agregar imagen</button><br>
+            <button onclick="cambiarEstilo()">Cambiar estilo</button><br>
+            <button id="botonColor"
+            onclick="cambiarBoton()">Cambiar boton </button><br>
+            <button onclick="mostrarMensaje()">Mostrar mensaje</button><br>
+            <button class="btn"
+            onclick="deshabilitarBoton()">Enviar</button><br>
+        </div>
+    </main>
+
+    <script>
+        function cambiarTexto() {
+            
+            document.getElementById("mensaje").innerHTML =
+                "Bienvenidos a mi primera practica";
+        }
+
+        function agregarImagen() {
+          
+            document.getElementById("imagen").innerHTML =
+                '<img src="https://wallpaperaccess.com/full/13490155.jpg"width="300">';
+        }
+
+        function mostrarMensaje() {
+             var elemento = document.getElementById("mensaje");
+              elemento.textContent = "Hola Compañeros";
+        }
+
+         function cambiarBoton() {
+             document.getElementById("botonColor").style.backgroundColor = "lightblue";
+        }
+
+        function cambiarEstilo() {
+             document.querySelector(".destacado").style.color = "blue";
+        }
+
+        function deshabilitarBoton() {
+             document.querySelector(".btn").disabled = true;
+}
+    </script>
+
+</body>
+</html>
